@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Real-Time Ludo</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="glass nav">
+    <div id="profile"></div>
+    <nav>
+      <a href="/leaderboard.html">Leaderboard</a>
+      <a href="/history.html">History</a>
+      <a href="/admin.html">Admin</a>
+      <button id="logout">Logout</button>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <section class="glass card">
+      <h2>Room</h2>
+      <div class="row">
+        <input id="roomId" placeholder="room-alpha" />
+        <button id="joinRoom">Join Room</button>
+      </div>
+      <p id="status">Disconnected</p>
+      <p id="turn"></p>
+      <div class="row">
+        <button id="rollDice">Roll Dice</button>
+        <span id="diceValue">-</span>
+      </div>
+      <div id="pieceButtons" class="row wrap"></div>
+    </section>
+
+    <section class="glass card">
+      <h2>Board State</h2>
+      <pre id="board"></pre>
+    </section>
+
+    <section class="glass card">
+      <h2>Chat</h2>
+      <div id="chatBox" class="chat-box"></div>
+      <div class="row">
+        <input id="chatInput" placeholder="Type message" />
+        <button id="sendChat">Send</button>
+      </div>
+    </section>
+  </main>
+
+  <audio id="sound-dice" src="/sounds/dice.mp3"></audio>
+  <audio id="sound-move" src="/sounds/move.mp3"></audio>
+  <audio id="sound-win" src="/sounds/win.mp3"></audio>
+  <audio id="sound-lose" src="/sounds/lose.mp3"></audio>
+  <audio id="sound-join" src="/sounds/join.mp3"></audio>
+  <script src="/js/game.js"></script>
+</body>
+</html>
